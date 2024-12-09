@@ -1,0 +1,114 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 90vh;
+    background-image: url("https://images.pexels.com/photos/7683619/pexels-photo-7683619.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.container .content {
+    z-index: 2;
+    border: 1px solid #ccc;
+    padding: 30px;
+    margin-top: 10vh;
+    border-radius: 5px;
+    background-color: #f8f8f8;;
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+}
+
+.login-form {
+    width: 100%;
+}
+
+.login-form .field {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.login-form .field input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    outline: none;
+}
+
+.login-form .field input:focus {
+    border-bottom: 1px solid #5c822b;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5c822b;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form button:hover {
+    background-color: #4b6e1b;
+}
+
+.login-form button:active {
+    background-color: #3a5e15;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-height: 100vh;
+        background-position: center center;
+        padding: 40px;
+        box-sizing: border-box;
+    }
+
+    .container .content {
+        margin-top: 5vh;
+        padding: 20px;
+    }
+
+    .login-form .field input {
+        margin: 5px 0;
+    }
+
+    .login-form button {
+        margin-top: 15px;
+    }
+}

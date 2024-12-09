@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans';
+    color: #252422;
+    background-color: #dfffa7;
+}
+
+.manager-container {
+    margin: 30px;
+}
+
+.manager-container .manager {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.manager-container .manager .goback-button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    border-radius: 5px;
+    background-color: #5c822b;
+    color: #ffffff;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.manager-container .manager .goback-button:hover {
+    background-color: #4b6e1b;
+}
+
+.manager-container .manager .goback-button:active {
+    background-color: #3a5e15;
+}
+
+.manager-container .manager .manager-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: 'Montserrat';
+    margin-bottom: 20px;
+}
+
+.manager-container .manager .search-form {
+    display: flex;
+    gap: 8px;
+}
+
+.manager-container .manager .search-form .search-input {
+    flex: 1;
+}
+
+.manager-container .manager .search-form .button {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.manager-container .manager .create-form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px 0;
+    gap: 8px;
+}
+
+.manager-container .manager .create-form .button {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.manager-container .manager .create-form .field {
+    flex: 1;
+    min-width: 80px;
+}
+
+.manager-container .manager .table-container {
+    margin: 40px 0;
+    overflow-x: auto;
+}
+
+.manager-container .manager .table-container .table {
+    font-size: 0.85rem;
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: collapse;
+}
+
+.manager-container .manager .table-container .table th, 
+.manager-container .manager .table-container .table td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 180px;
+    box-sizing: border-box;
+}
+
+.manager-container .manager .table-container .table th {
+    color: #868183;
+    font-weight: 600;
+}
+
+.manager-container .manager .table-container .table td .buttons-group {
+    display: flex;
+    gap: 8px;
+}
+
+.manager-container .manager .table-container .table td .buttons-group .record-action-button {
+    padding: 7px 10px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.manager-container .manager .table-container .table td .buttons-group .record-action-button:hover {
+    background-color: #f0f0f0;
+}
+
+.manager-container .manager .table-container .table td .buttons-group .record-action-button:active {
+    background-color: #e0e0e0;
+}
+
+.manager-container .manager .table-container .table td .buttons-group .record-action-button .material-symbols-outlined {
+    font-size: 1.3rem;
+}
+
+.manager-container .manager .table-container .table {
+    padding: 0 40px;
+}
+
+.manager-container .manager .table-container .table tr:hover {
+    background-color: #fAfAfA;
+}
+
+.manager select,
+.manager button,
+.manager .field,
+.manager .field::placeholder {
+    font-family: inherit;
+    font-size: 0.85rem;
+}
+
+.manager .field {
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    outline-offset: 2px;
+    background-color: #fff;
+    min-width: 45px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.manager .field::placeholder {
+    color: #a0a0a0;
+}
+
+
+.manager .field:focus {
+    outline: 2px solid #a0a0a0;
+}
+
+.manager select.field {
+    color: #252422;
+}
+
+.manager .button {
+    padding: 10px;
+    background-color: #efeeee;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.manager .button:hover {
+    background-color: #e0e0e0;
+}
+
+.manager .button:active {
+    background-color: #d0d0d0;
+}

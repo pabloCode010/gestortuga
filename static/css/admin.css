@@ -1,0 +1,130 @@
+body {
+    background-color: #dfffa7;
+}
+.container {
+    padding: 20px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.welcome {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.welcome-title {
+    font-size: 28px;
+    color: #5c822b;
+    margin-bottom: 10px;
+}
+.description {
+    color: #43493a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.welcome a {
+    background-color: #5c822b;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    gap: 10px;
+    max-width: fit-content;
+    text-decoration: none;
+}
+.welcome a:hover {
+    background-color: #4b6e1b;
+}
+.welcome a:active {
+    background-color: #3a5e15;
+}
+section {
+    margin-top: 80px;
+}
+.section-title {
+    color: #43493a;
+}
+.cards {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.cards .card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #43493a;
+}
+.cards .card a {
+    color: #5c822b;
+    font-weight: 400;
+}
+.card-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+footer {
+    padding: 12px 0;
+    margin-top: 40px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #43493a;
+}
+footer p {
+    font-size: 14px;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 80px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 20px;
+        max-width: 100%;
+    }
+    .welcome {
+        padding: 20px;
+        margin: 10px auto;
+    }
+    .welcome-title {
+        font-size: 24px;
+    }
+    .description {
+        font-size: 14px;
+    }
+    .welcome a {
+        padding: 8px 16px;
+        margin-top: 20px;
+    }
+    .cards {
+        padding: 0 10px;
+    }
+    .cards .card {
+        padding: 15px;
+    }
+    .card-title {
+        font-size: 18px;
+    }
+    footer {
+        padding: 10px 0;
+    }
+    footer p {
+        font-size: 12px;
+    }
+    .header .button {
+        padding: 5px 10px;
+        margin: 5px 0;
+        display: none;
+    }
+}

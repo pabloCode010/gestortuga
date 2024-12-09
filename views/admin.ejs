@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="stylesheet" href="/static/css/admin.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <title>GesTortuga | Admin</title>
+</head>
+<body>
+    <header class="header">
+        <span class="title">GesTortuga</span>
+        <div class="nav-links">
+            <a href="#tortugas" class="button">Tortugas</a>
+            <% if (user.id_role === 1) { %>
+            <a href="#usuarios" class="button">Usuarios</a>
+            <a href="#reportes" class="button">Reportes</a>
+            <% } %>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="welcome">
+                <h1 class="welcome-title">Bienvenid@, <%= user.name %></h1>
+                <p class="description">Nos alegra tenerte aquí. En esta sección podrás gestionar y supervisar todas las operaciones del sistema. Explora las herramientas disponibles para administrar los datos de las tortugas, generar reportes o controlar el acceso al sistema.</p>
+                <a href="/logout">
+                    Cerrar sesión
+                    <span class="material-symbols-outlined">
+                        logout
+                    </span>
+                </a>
+            </section>
+                
+            <section id="tortugas">
+                <h2 class="section-title">Tortugas</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3 class="card-title">Tortugas registradas</h3>
+                        <p class="card-description">Administra la lista de tortugas registradas en el sistema. Podrás ver la información detallada de cada una de ellas o añadir nuevas tortugas.</p>
+                        <a href="/admin/turtles" class="button">Administrar tortugas</a>
+                    </article>
+                    <article class="card">
+                        <h3 class="card-title">Historiales médicos</h3>
+                        <p class="card-description">Accede a los historiales médicos de las tortugas. Podrás revisar los tratamientos aplicados o generar nuevos historiales.</p>
+                        <a href="/admin/medical_records" class="button">Administrar historiales</a>
+                    </article>
+                </div>
+            </section>
+
+            <% if (user.id_role === 1) { %>
+                
+                <section id="usuarios">
+                    <h2 class="section-title">Usuarios</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3 class="card-title">Usuarios registrados</h3>
+                        <p class="card-description">Administra la lista de usuarios registrados en el sistema. Podrás ver información detallada de cada uno de ellos, editar datos o agregar nuevos usuarios.</p>
+                        <a href="/admin/users" class="button">Administrar usuarios</a>
+                    </article>
+                </div>
+            </section>
+            
+            <section id="reportes">
+                <h2 class="section-title">Reportes</h2>
+                <div class="cards">
+                    <article class="card">
+                        <h3 class="card-title">Reporte médico</h3>
+                        <p class="card-description">Crea reportes médicos de las tortugas. Para incluir nuevos diagnósticos y tratamientos aplicados.</p>
+                        <a href="/admin/report/medical_records" target="_blank" class="button">Generar reporte médico</a>
+                    </article>
+                    <article class="card">
+                        <h3 class="card-title">Reporte general</h3>
+                        <p class="card-description">Obtén un reporte general de todas las actividades y datos del sistema.</p>
+                        <a href="/admin/report/general" target="_blank" class="button">Generar reporte general</a>
+                    </article>
+                    <article class="card">
+                        <h3 class="card-title">Reporte de usuarios</h3>
+                        <p class="card-description">Genera un reporte de todos los usuarios registrados en el sistema.</p>
+                        <a href="/admin/report/users" target="_blank" class="button">Generar reporte de usuarios</a>
+                    </article>
+                    <article class="card">
+                        <h3 class="card-title">Reporte de tortugas</h3>
+                        <p class="card-description">Genera un reporte de todas las tortugas registradas en el sistema.</p>
+                        <a href="/admin/report/turtles" target="_blank" class="button">Generar reporte de tortugas</a>
+                    </article>
+                </div>
+            </section>
+            
+            <% } %>
+        </div>
+    </main>
+    <footer class="footer">
+        <p class="footer-text">GesTortuga &copy; 2024</p>
+    </footer>
+</body>
+</html>
